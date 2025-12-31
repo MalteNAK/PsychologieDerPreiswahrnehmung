@@ -1,0 +1,133 @@
+\documentclass[11pt,bibtotoc]{article}
+\usepackage[table]{xcolor}
+\usepackage[ngerman]{babel} % Für Silbentrennung
+\usepackage[utf8]{inputenc} % Um Umlaute und Sonderzeichen nutzen zu können
+\usepackage[a4paper,
+lmargin={2.5cm}, % 2.5cm links
+rmargin={2.5cm}, % 2.5cm rechts
+tmargin={2.5cm},
+bmargin={2.75cm}]{geometry} % Für das Layout
+\usepackage{setspace} % Für den Zeilenabstand
+\setstretch{1.25}
+\usepackage{graphicx} % Um Bilder einzufügen
+\usepackage{wrapfig} % Um Bilder im Fließtext einzubinden
+\usepackage{csquotes} % Um Text in Anführungsstriche zu setzen
+\usepackage{mathptmx} % Ähnlich zu Times New Roman
+\usepackage{fancyhdr} % Um den Header einzufügen
+\usepackage{pdfpages} % Um die Titelseite einbinden
+\usepackage{hyperref} % Um Verlinkungen einfügen
+\usepackage{acronym} % Um Akronyme zu definieren
+\usepackage{textcomp} % Um spezielle Zeichen verwenden zu können (z.B. °, µ)
+\usepackage{subcaption} % Um mehrere Bilder zusammen einzustellen und Links zu Abbildungen zu korrigieren
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{float}
+
+\usepackage[
+  backend=biber,
+  style=authoryear,
+  autocite=footnote,
+  maxcitenames=2,
+  mincitenames=1,
+  maxbibnames=99
+]{biblatex}
+\addbibresource{Quellenverzeichnis.bib}
+
+\DefineBibliographyStrings{ngerman}{andothers={et al.}}
+
+
+% Zitierungen kursiv innerhalb runder Klammern setzen
+% \renewcommand*{\mkbibparens}[1]{\mkbibemph{(#1)}}
+% \let\cite\parencite
+
+\setlength{\parindent}{0pt} % Verhindert das Einrücken des ersten Satzes jedes Absatzes
+
+\newcommand{\note}[1]{%
+  {\color{red} #1}%
+}
+
+
+\pagestyle{fancy}
+\fancyhf{} % Leert den Kopf- und Fußbereich
+\RequirePackage{soul}
+% Kopfzeilenbreite auf den Textbereich anpassen
+\setlength{\headheight}{42.0pt} % Setzt die Kopfzeilenhöhe
+\setlength{\headsep}{25pt} % Setzt den Abstand zwischen der Linie und dem Textkörper
+\renewcommand{\headrulewidth}{2pt} % Stellt die Linienbreite auf 2pt
+\setlength{\headwidth}{\dimexpr\textwidth} % Setzt die Linie so weit wie der Textbereich geht
+
+% Kapitelname links und Logo rechts
+\fancyhead[L]{\nouppercase{\leftmark}} % Zeigt das Kapitel links an
+\fancyhead[R]{\includegraphics[width=5.5cm]{Resources/Nordakademie_Logo.png}} % Zeigt das Logo rechts an
+
+\cfoot{\thepage} % Fußzeile mit Seitenzahl
+
+\newcounter{romanBeginningEnd} % Um Römische Seitenzahl zu speichern
+
+% Sektionen referenzen anpassen
+\addto\extrasngerman{%
+	\renewcommand{\sectionautorefname}{siehe}%
+	\let\subsectionautorefname\sectionautorefname%
+	\let\subsubsectionautorefname\sectionautorefname%
+}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \include{cover}
+
+	\setcounter{page}{1} % Römische Seitenzahlen
+	\pagenumbering{Roman}
+	
+	\tableofcontents % Inhaltsverzeichnis
+	\newpage
+	
+	\setcounter{secnumdepth}{0} % Keine Numerierung von Überschriften
+	\clearpage
+	\phantomsection
+
+	\section{Abkürzungsverzeichnis}
+	% Abkürzungen
+	\begin{acronym}%[KRITIS] % Für Formatierung längste Abkürzung eintragen
+	\acro{BEISPIEL}[BEISPIEL]{Beispiel Definition}
+	\end{acronym}
+    
+	\newpage
+	
+	\setcounter{secnumdepth}{3} % Überschriften wieder numerieren
+	
+	\setcounter{romanBeginningEnd}{\the\value{page}} % Speichern der römischen Seitenzahl
+	\setcounter{page}{1} % Mit Arabischen Seitenzahlen wieder bei 1 anfangen
+	\pagenumbering{arabic}
+	
+	% ###############################################################
+	% Hier Inhalt einfügen
+	\input{Content/01_Grundlagen.tex}
+	\input{Content/02_PsychologischeMechanismen.tex}
+	% ###############################################################
+	
+	\newpage
+	\pagenumbering{Roman}
+	\setcounter{page}{\theromanBeginningEnd} % Römische Seitenzahlen fortsetzen
+	\setcounter{secnumdepth}{0} % Nummerierung der Überschriften entfernt
+	\section{Quellenverzeichnis}
+	\setcounter{secnumdepth}{3} % Überschriften wieder numerieren (Für den Anhang)
+	\printbibliography[heading=none]
+	\clearpage
+	\setcounter{secnumdepth}{0} % Nummerierung der Überschriften entfernt
+	\section{Eigenständigkeitserklärung}
+	\clearpage
+	\section{Aufteilung der Inhalte}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+Kapitel & Verfasser \\
+\hline
+% Tragen Sie hier Ihre Aufteilung ein
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

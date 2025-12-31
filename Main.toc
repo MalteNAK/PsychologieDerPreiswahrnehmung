@@ -1,0 +1,19 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{Abkürzungsverzeichnis}{II}{section*.3}%
+\contentsline {section}{\numberline {1}Grundlagen der Preiswahrnehmung}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Marketing als Bedürfnisbefriedigung: Der Weg zur Preisentscheidung}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Vom Homo Oeconomicus zum emotionalen Entscheider}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Entwicklung des Marketing-Mix: Von statisch zu dynamisch}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Der Preis im Wandel: Vom objektiven Wert zum psychologischen Signal}{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Globalisierung und Digitalisierung als Verstärker der Preispsychologie}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Zwischenfazit: Preiswahrnehmung als emotionaler Entscheidungsprozess}{3}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Psychologische Mechanismen der Preiswahrnehmung (Helene)}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Zero-Price-Effekt}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Preisschwelleneffekt (Price Threshold Effect)}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Ankereffekt}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Prospect Theory}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Veblen-Effekt}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Snob-Effekt}{6}{subsection.2.6}%
+\contentsline {section}{Quellenverzeichnis}{III}{section*.4}%
+\contentsline {section}{Eigenständigkeitserklärung}{IV}{section*.5}%
+\contentsline {section}{Aufteilung der Inhalte}{V}{section*.6}%
